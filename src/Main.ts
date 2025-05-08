@@ -107,7 +107,7 @@
   getDayType(Day.Monday);
   getDayType(Day.Sunday);
 
-  const squareAsync = async (n: number): Promise<number> => {
+  async function squareAsync(n: number): Promise<number> {
     return new Promise((resolve, reject) => {
       setTimeout(() => {
         if (n < 0) {
@@ -117,7 +117,7 @@
         }
       }, 1000);
     });
-  };
+  }
   squareAsync(4)
     .then((result) => {
       console.log("timeResult :", result);
