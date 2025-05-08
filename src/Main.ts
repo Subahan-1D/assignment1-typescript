@@ -16,13 +16,25 @@
   const filterByRating = (items: { title: string; rating: number }[]) => {
     return items.filter((item) => item.rating >= 4.0);
   };
-    // const books = [
-    //   { title: "Book A", rating: 4.5 },
-    //   { title: "Book B", rating: 3.2 },
-    //   { title: "Book C", rating: 3.9 },
-    //   { title: "Book D", rating: 4.0 },
-    //   { title: "Book E", rating: 5.0 },
-    // ];
+  // const books = [
+  //   { title: "Book A", rating: 4.5 },
+  //   { title: "Book B", rating: 3.2 },
+  //   { title: "Book C", rating: 3.9 },
+  //   { title: "Book D", rating: 4.0 },
+  //   { title: "Book E", rating: 5.0 },
+  // ];
 
-    // console.log(filterByRating(books));
+  // console.log(filterByRating(books));
+
+  // PROBLEM : 3
+
+  const concatenateArrays = <T>(...arrays: T[][]) => {
+    let result: T[] = [];
+    for (const array of arrays) {
+      result = result.concat(array);
+    }
+    return result;
+  };
+//  console.log(concatenateArrays(["a", "b"], ["c"])) ;  
+// console.log(concatenateArrays([1, 2], [3, 4], [5])); 
 }
