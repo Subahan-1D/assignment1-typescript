@@ -101,12 +101,12 @@
     });
   };
   console.log("StatTime :", new Date().toLocaleTimeString());
-//   squareAsync(4).then((result) => {
-//     console.log("timeResult :", result);
-//     console.log("after 1s", new Date().toLocaleTimeString());
-//   });
-//     squareAsync(-4)
-//   .catch((error) => {
-//       console.error("Error:", error.message);
-//     });
+  squareAsync(4).then((result) => {
+    console.log("timeResult :", result);
+    console.log("after 1s", new Date().toLocaleTimeString());
+  });
+    squareAsync(-4)
+  .catch((error) => {
+      console.error("Error:", error.message);
+    });
 }
