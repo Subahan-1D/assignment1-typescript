@@ -68,5 +68,39 @@
   //   console.log(myCar.getInfo());
   //   console.log(myCar.getModel())
 
+  // PROBLEM : ---------------------------------------------------------------> 5
 
+  const processValue = (value: string | number) => {
+    if (typeof value === "string") {
+      return value.length;
+    } else {
+      return value * 2;
+    }
+  };
+  //   console.log(processValue("hello"));
+  //   console.log(processValue(10));
+
+  // PROBLEM : ---------------------------------------------------------------> 6
+   
+    
+  interface Product {
+    name: string;
+    price: number;
+  }
+  const getMostExpensiveProduct = (products: Product[]) => {
+    if (products.length === 0) return null;
+
+    const highestPrice = Math.max(...products.map((product) => product.price));
+    return products.find((product) => product.price === highestPrice);
+  };
+  const products = [
+    { name: "Pen", price: 10 },
+    { name: "Notebook", price: 25 },
+    { name: "Bag", price: 50 },
+    { name: "mog", price: 0 },
+  ];
+
+//   console.log(getMostExpensiveProduct(products));
+
+// PROBLEM : ---------------------------------------------------------------> 7
 }
