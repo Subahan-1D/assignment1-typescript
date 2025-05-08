@@ -69,9 +69,6 @@
     { name: "mog", price: 0 },
   ];
 
-  //   console.log(getMostExpensiveProduct(products));
-
-  // PROBLEM : ---------------------------------------------------------------> 7
 
   enum Day {
     Monday,
