@@ -81,8 +81,7 @@
   //   console.log(processValue(10));
 
   // PROBLEM : ---------------------------------------------------------------> 6
-   
-    
+
   interface Product {
     name: string;
     price: number;
@@ -100,7 +99,67 @@
     { name: "mog", price: 0 },
   ];
 
-//   console.log(getMostExpensiveProduct(products));
+  //   console.log(getMostExpensiveProduct(products));
 
-// PROBLEM : ---------------------------------------------------------------> 7
+  // PROBLEM : ---------------------------------------------------------------> 7
+
+  enum Day {
+    Monday,
+    Tuesday,
+    Wednesday,
+    Thursday,
+    Friday,
+    Saturday,
+    Sunday,
+  }
+
+  const getDayType = (day: Day) => {
+    if (day === Day.Friday || day === Day.Saturday) {
+      return "Weekend";
+    } else {
+      return "Weekday";
+    }
+  };
+
+  //   console.log(getDayType(Day.Friday))
+  //   console.log(getDayType(Day.Saturday))
+  //   console.log(getDayType(Day.Monday))
+
+  // PROBLEM : ---------------------------------------------------------------> 8
+
+  //   const squareAsync = async (n: number): Promise<number> => {
+  //     return new Promise((resolve, reject) => {
+  //       setTimeout(() => {
+  //         if (n < 0) {
+  //           reject(new Error("Negative number not allowed"));
+  //         } else {
+  //           resolve(n * n);
+  //         }
+  //       },1000);
+  //     });
+  //   };
+  //   squareAsync(4)
+  //     .then((res) => console.log("Result:", res))
+  //     .catch((err) => console.error("Error:", err.message));
+
+  const squareAsync = async (n: number): Promise<number> => {
+    return new Promise((resolve, reject) => {
+      setTimeout(() => {
+        if (n < 0) {
+          reject(new Error("Negative number not allowed"));
+        } else {
+          resolve(n * n);
+        }
+      }, 1000);
+    });
+  };
+  console.log("StatTime :", new Date().toLocaleTimeString());
+  squareAsync(4).then((result) => {
+    console.log("timeResult :", result);
+    console.log("after 1s", new Date().toLocaleTimeString());
+  });
+  //   squareAsync(-4)
+  // .catch((error) => {
+  //     console.error("Error:", error.message);
+  //   });
 }
