@@ -97,14 +97,13 @@
     Saturday,
     Sunday,
   }
-
-  const getDayType = (day: Day) => {
+  function getDayType(day: Day): string {
     if (day === Day.Sunday || day === Day.Saturday) {
       return "Weekend";
     } else {
       return "Weekday";
     }
-  };
+  }
   getDayType(Day.Monday);
   getDayType(Day.Sunday);
 
