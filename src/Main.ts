@@ -1,5 +1,4 @@
 {
-  // PROBLEM : ---------------------------------------------------------------> 1
   const formatString = (input: string, toUpper?: boolean) => {
     if (toUpper === false) {
       return input.toLowerCase();
@@ -7,27 +6,9 @@
       return input.toUpperCase();
     }
   };
-
-  //   console.log(formatString("Hello"));
-  //   console.log(formatString("Hello", true));
-  //   console.log(formatString("Hello", false));
-
-  // PROBLEM : ---------------------------------------------------------------> 2
-
   const filterByRating = (items: { title: string; rating: number }[]) => {
     return items.filter((item) => item.rating >= 4.0);
   };
-  // const books = [
-  //   { title: "Book A", rating: 4.5 },
-  //   { title: "Book B", rating: 3.2 },
-  //   { title: "Book C", rating: 3.9 },
-  //   { title: "Book D", rating: 4.0 },
-  //   { title: "Book E", rating: 5.0 },
-  // ];
-
-  // console.log(filterByRating(books));
-
-  // PROBLEM : ---------------------------------------------------------------> 3
 
   const concatenateArrays = <T>(...arrays: T[][]) => {
     let result: T[] = [];
@@ -36,10 +17,7 @@
     }
     return result;
   };
-  //  console.log(concatenateArrays(["a", "b"], ["c"])) ;
-  // console.log(concatenateArrays([1, 2], [3, 4], [5]));
-
-  // PROBLEM : ---------------------------------------------------------------> 4
+ 
 
   class Vehicle {
     private make: string;
@@ -64,11 +42,7 @@
       return `Model : ${this.model}`;
     }
   }
-  //   const myCar = new Car("Toyota", 2025, "Corolla");
-  //   console.log(myCar.getInfo());
-  //   console.log(myCar.getModel())
 
-  // PROBLEM : ---------------------------------------------------------------> 5
 
   const processValue = (value: string | number) => {
     if (typeof value === "string") {
@@ -77,10 +51,6 @@
       return value * 2;
     }
   };
-  //   console.log(processValue("hello"));
-  //   console.log(processValue(10));
-
-  // PROBLEM : ---------------------------------------------------------------> 6
 
   interface Product {
     name: string;
@@ -121,26 +91,6 @@
     }
   };
 
-  //   console.log(getDayType(Day.Friday))
-  //   console.log(getDayType(Day.Saturday))
-  //   console.log(getDayType(Day.Monday))
-
-  // PROBLEM : ---------------------------------------------------------------> 8
-
-  //   const squareAsync = async (n: number): Promise<number> => {
-  //     return new Promise((resolve, reject) => {
-  //       setTimeout(() => {
-  //         if (n < 0) {
-  //           reject(new Error("Negative number not allowed"));
-  //         } else {
-  //           resolve(n * n);
-  //         }
-  //       },1000);
-  //     });
-  //   };
-  //   squareAsync(4)
-  //     .then((res) => console.log("Result:", res))
-  //     .catch((err) => console.error("Error:", err.message));
 
   const squareAsync = async (n: number): Promise<number> => {
     return new Promise((resolve, reject) => {
